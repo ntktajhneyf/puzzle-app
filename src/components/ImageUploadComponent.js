@@ -1,5 +1,14 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import image1 from '../assets/images/1.jpg';
+import image2 from '../assets/images/3.jpg';
+import image3 from '../assets/images/5.jpg';
+import image4 from '../assets/images/6.jpg';
+import image5 from '../assets/images/2.webp';
+import image6 from '../assets/images/4.webp';
+
+
+import './ImageUploadComponent.css';
 
 function ImageUploadComponent() {
   const [image, setImage] = useState(null);
@@ -10,6 +19,10 @@ function ImageUploadComponent() {
     setImage(URL.createObjectURL(event.target.files[0]));
   };
 
+  const handleImageSelect = (image) => {
+    setImage(image);
+  };
+
   const handleNext = () => {
     if (image) {
       navigate('/puzzle', { state: { image, pieces } });
@@ -17,10 +30,11 @@ function ImageUploadComponent() {
   };
 
   return (
-    <div>
+    <div class="upload-image">
       <h2>Upload Image</h2>
       <input type="file" accept="image/*" onChange={handleImageUpload} />
-      <div>
+      <h3>Or select one of the standard images:</h3>
+      <div class="block-size">
         <label>
           <input
             type="radio"
@@ -50,6 +64,14 @@ function ImageUploadComponent() {
         </label>
       </div>
       <button onClick={handleNext} disabled={!image}>Next</button>
+      <div className="standard-images">
+        <img src={image1} alt="Standard 1" onClick={() => handleImageSelect(image1)} className="standard-image" />
+        <img src={image2} alt="Standard 2" onClick={() => handleImageSelect(image2)} className="standard-image" />
+        <img src={image3} alt="Standard 3" onClick={() => handleImageSelect(image3)} className="standard-image" />
+        <img src={image4} alt="Standard 3" onClick={() => handleImageSelect(image3)} className="standard-image" />
+        <img src={image5} alt="Standard 3" onClick={() => handleImageSelect(image3)} className="standard-image" />
+        <img src={image6} alt="Standard 3" onClick={() => handleImageSelect(image3)} className="standard-image" />
+      </div>
     </div>
   );
 }
