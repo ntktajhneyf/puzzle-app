@@ -1,0 +1,90 @@
+.home-button {
+  float: right;
+  padding: 10px 20px;
+  background-color: #007acc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 1em;
+}
+
+.home-button:hover {
+  background-color: #005f99;
+}
+
+/* Інші стилі залишаються без змін */
+
+.puzzle-container {
+  display: grid;
+  gap: 10px;
+  max-width: 90%;
+  margin: auto;
+  padding: 20px;
+  background-color: #f0faff;
+  border-radius: 15px;
+}
+
+.puzzle-piece {
+  width: 100%;
+  padding-top: 100%; /* Зберігає пропорції */
+  background-color: #e0ffe0;
+  border: 2px solid #00aaff;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.puzzle-piece.selected {
+  border: 3px solid #ff6f61;
+  z-index: 1; /* Піднімає обрану частину над іншими */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.preview-container {
+  margin-top: 20px;
+  text-align: center;
+  background-color: #ffeedd;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.preview-image {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #ff6f61;
+  border-radius: 10px;
+  object-fit: cover; /* Обрізає зображення за розміром */
+}
+
+.done-button {
+  display: block;
+  margin: 20px auto;
+  padding: 15px 30px;
+  background-color: #ff6f61;
+  color: white;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.done-button:hover {
+  background-color: #ff4f41;
+}
+
+h2 {
+  text-align: center;
+  color: #007acc;
+  font-size: 2em;
+  font-family: 'Comic Sans MS', sans-serif;
+}
+
+h3 {
+  text-align: center;
+  color: #ff6f61;
+  font-size: 1.5em;
+  font-family: 'Comic Sans MS', sans-serif;
+}

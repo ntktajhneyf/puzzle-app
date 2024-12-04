@@ -1,0 +1,13 @@
+.puzzle-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+  }
+  
+  .puzzle-piece {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 1px solid #000;
+  }
+  
