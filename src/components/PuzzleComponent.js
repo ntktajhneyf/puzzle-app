@@ -104,7 +104,7 @@ function PuzzleComponent() {
   };
 
   return (
-    <div>
+    <div class="component">
       <h2>Puzzle Game <button onClick={handleHome} className="home-button">Home</button></h2>
       <div className="puzzle-container" style={{ gridTemplateColumns: `repeat(${pieceSize}, 1fr)` }}>
         {puzzlePieces.map((piece, index) => (

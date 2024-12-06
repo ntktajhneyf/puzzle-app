@@ -32,38 +32,44 @@ function ImageUploadComponent() {
   return (
     <div class="upload-image">
       <h2>Upload Image</h2>
-      <input type="file" accept="image/*" onChange={handleImageUpload} />
-      <h3>Or select one of the standard images:</h3>
-      <div class="block-size">
-        <label>
-          <input
-            type="radio"
-            value={4}
-            checked={pieces === 4}
-            onChange={() => setPieces(4)}
-          />
-          2x2
-        </label>
-        <label>
-          <input
-            type="radio"
-            value={9}
-            checked={pieces === 9}
-            onChange={() => setPieces(9)}
-          />
-          3x3
-        </label>
-        <label>
-          <input
-            type="radio"
-            value={16}
-            checked={pieces === 16}
-            onChange={() => setPieces(16)}
-          />
-          4x4
-        </label>
+
+      <div class="image-selection">
+        <div>
+        <input type="file" accept="image/*" onChange={handleImageUpload} />
+</div>
+        <div class="block-size">
+          <label>
+            <input
+              type="radio"
+              value={4}
+              checked={pieces === 4}
+              onChange={() => setPieces(4)}
+            />
+            2x2
+          </label>
+          <label>
+            <input
+              type="radio"
+              value={9}
+              checked={pieces === 9}
+              onChange={() => setPieces(9)}
+            />
+            3x3
+          </label>
+          <label>
+            <input
+              type="radio"
+              value={16}
+              checked={pieces === 16}
+              onChange={() => setPieces(16)}
+            />
+            4x4
+          </label>
+        </div>
+
+      <button class="button-next" onClick={handleNext} disabled={!image}>Next</button>
       </div>
-      <button onClick={handleNext} disabled={!image}>Next</button>
+      <h3>Or select one of the standard images:</h3>
       <div className="standard-images">
         <img src={image1} alt="Standard 1" onClick={() => handleImageSelect(image1)} className="standard-image" />
         <img src={image2} alt="Standard 2" onClick={() => handleImageSelect(image2)} className="standard-image" />

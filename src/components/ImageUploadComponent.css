@@ -1,8 +1,22 @@
+.upload-image{
+   width: 100%;
+    padding: 40px;
+    margin: auto;
+}
+
+.image-selection {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+}
+
 .standard-images {
     display: flex;
     justify-content: center;
     gap: 10px;
     margin: 10px 0;
+    padding: 0 40px;
   }
   
   .standard-image {
@@ -19,8 +33,31 @@
     border-color: #007acc;
   }
 
-  .upload-image>input {
+  
+  .puzzle-container {
+      width: 50%;
+    }
+    
+    .upload-image>input {
+      background-color: #007acc;
+    }
+  button, input{
+    padding: 10px 20px;
     background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 1em;
+    /* width: 140px; */
+  }
+  .button-next{
+    width: 180px;
+  }
+  .block-size {
+    font-size: 1.5em;
+
   }
   
   @media (max-width: 520px) {
@@ -30,6 +67,10 @@
     width: 80%;
     gap: 15px;
     margin: auto;
+  }
+
+  .puzzle-container {
+    width: 90%;
   }
   
   }

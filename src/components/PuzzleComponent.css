@@ -1,3 +1,7 @@
+
+.component {
+  background-color: #ffeedd;
+}
 .home-button {
   float: right;
   padding: 10px 20px;
@@ -8,10 +12,13 @@
   cursor: pointer;
   transition: background-color 0.2s;
   font-size: 1em;
+  margin-right: 100px;
+
 }
 
 .home-button:hover {
   background-color: #005f99;
+  
 }
 
 /* Інші стилі залишаються без змін */
