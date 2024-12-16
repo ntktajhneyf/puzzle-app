@@ -7,16 +7,15 @@
 .image-selection {
     display: flex;
     flex-direction: column;
-    width: 50%;
-    margin: auto;
+    align-items: center;
+
 }
 
 .standard-images {
     display: flex;
-    justify-content: center;
     gap: 10px;
-    margin: 10px 0;
-    padding: 0 40px;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   
   .standard-image {
@@ -63,10 +62,11 @@
   @media (max-width: 520px) {
 
     .standard-images {
-    display: block;
-    width: 80%;
-    gap: 15px;
-    margin: auto;
+    /* display: block; */
+    /* flex-wrap: wrap; */
+    /* width: 80%; */
+    /* gap: 15px; */
+    /* margin: auto; */
   }
 
   .puzzle-container {

@@ -70,13 +70,13 @@ function ImageUploadComponent() {
       <button class="button-next" onClick={handleNext} disabled={!image}>Next</button>
       </div>
       <h3>Or select one of the standard images:</h3>
-      <div className="standard-images">
-        <img src={image1} alt="Standard 1" onClick={() => handleImageSelect(image1)} className="standard-image" />
-        <img src={image2} alt="Standard 2" onClick={() => handleImageSelect(image2)} className="standard-image" />
-        <img src={image3} alt="Standard 3" onClick={() => handleImageSelect(image3)} className="standard-image" />
-        <img src={image4} alt="Standard 3" onClick={() => handleImageSelect(image3)} className="standard-image" />
-        <img src={image5} alt="Standard 3" onClick={() => handleImageSelect(image3)} className="standard-image" />
-        <img src={image6} alt="Standard 3" onClick={() => handleImageSelect(image3)} className="standard-image" />
+      <div class="standard-images">
+        <img src={image1} alt="Standard 1" onClick={() => handleImageSelect(image1)} class="standard-image" />
+        <img src={image2} alt="Standard 2" onClick={() => handleImageSelect(image2)} class="standard-image" />
+        <img src={image3} alt="Standard 3" onClick={() => handleImageSelect(image3)} class="standard-image" />
+        <img src={image4} alt="Standard 3" onClick={() => handleImageSelect(image3)} class="standard-image" />
+        <img src={image5} alt="Standard 3" onClick={() => handleImageSelect(image3)} class="standard-image" />
+        <img src={image6} alt="Standard 3" onClick={() => handleImageSelect(image3)} class="standard-image" />
       </div>
     </div>
   );
