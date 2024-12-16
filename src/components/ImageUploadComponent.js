@@ -36,7 +36,7 @@ function ImageUploadComponent() {
       <div class="image-selection">
         <div>
         <input type="file" accept="image/*" onChange={handleImageUpload} />
-</div>
+        </div>
         <div class="block-size">
           <label>
             <input
@@ -78,6 +78,9 @@ function ImageUploadComponent() {
         <img src={image5} alt="Standard 3" onClick={() => handleImageSelect(image3)} class="standard-image" />
         <img src={image6} alt="Standard 3" onClick={() => handleImageSelect(image3)} class="standard-image" />
       </div>
+      
+      <button class="button-next" onClick={handleNext} disabled={!image}>Next</button>
+
     </div>
   );
 }
